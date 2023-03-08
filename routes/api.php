@@ -14,6 +14,6 @@ use App\Http\Controllers\AttendanceController;
 | is assigned the "api" middleware group. Enjoy building your API!
 |
 */
-Route::get('/annual-leaves', [AttendanceController::class, 'index']);
+Route::get('/annual-leaves', [AttendanceController::class, 'index'])->name('leaves-index');
 Route::post('/annual-leaves', [AttendanceController::class, 'store']);
 Route::get('/annual-leaves/{$id}', [AttendanceController::class, 'view'])->name('view-leaves');
